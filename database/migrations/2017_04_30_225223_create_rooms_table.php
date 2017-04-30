@@ -33,7 +33,9 @@ class CreateRoomsTable extends Migration
     public function down()
     {
         //
-        Schema::drop('clients');
+        Schema::drop('rooms');
 
     }
+
+
 }
