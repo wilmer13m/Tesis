@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetailsTable extends Migration
+class CreateOriginsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,10 @@ class CreateDetailsTable extends Migration
      */
     public function up()
     {
-        //tabla de detalle de ordenes
-        Schema::create('detail',function(Blueprint $table){
+        //tabla de origen de ordenes
+        Schema::create('origins',function(Blueprint $table){
             $table->increments('id');
-            $table->integer('id_order');
-            $table->integer('cantidad_prod');
-            $table->string('descripcion_prod');
-            $table->float('gravado_orden');
-            $table->float('total');
-            $table->float('impuesto');
+            $table->string('tipo_origen');
 
             $table->timestamps();
         });
@@ -35,7 +30,7 @@ class CreateDetailsTable extends Migration
     public function down()
     {
         //
-        Schema::drop('detail');
+        Schema::drop('origins');
 
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoomsTable extends Migration
+class CreateAliquotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
-        //tabla de habitaciones
-        Schema::create('rooms',function(Blueprint $table){
+        //tabla de alicuotas
+        Schema::create('aliquot',function(Blueprint $table){
+
             $table->increments('id');
-            $table->string('numero_habitacion');
-            $table->string('tipo_habitacion');
-            $table->string('estatus_habitacion');
-            //$table->integer('id_reservation');
+            $table->string('tipo');
+            $table->integer('valor');
             $table->timestamps();
         });
 
@@ -33,9 +32,7 @@ class CreateRoomsTable extends Migration
     public function down()
     {
         //
-        Schema::drop('rooms');
+        Schema::drop('aliquot');
 
     }
-
-
 }
