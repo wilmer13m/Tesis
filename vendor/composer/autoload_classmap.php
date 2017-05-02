@@ -33,6 +33,7 @@ return array(
     'CreateDetailsTable' => $baseDir . '/database/migrations/2017_05_01_010843_create_details_table.php',
     'CreateFaenasTable' => $baseDir . '/database/migrations/2017_05_01_021037_create_faenas_table.php',
     'CreateGroupsTable' => $baseDir . '/database/migrations/2017_05_01_012136_create_groups_table.php',
+    'CreateLocationTable' => $baseDir . '/database/migrations/2017_05_02_023236_create_location_table.php',
     'CreateMaintenanceTable' => $baseDir . '/database/migrations/2017_05_01_013919_create_maintenance_table.php',
     'CreateOrdersTable' => $baseDir . '/database/migrations/2017_05_01_005203_create__orders_table.php',
     'CreateOriginsTable' => $baseDir . '/database/migrations/2017_05_01_011613_create_origins_table.php',
