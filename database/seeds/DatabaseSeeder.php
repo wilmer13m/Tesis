@@ -160,10 +160,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'helado',
             'cantidad_prod' => '100',
-            'id_prices' => 16,
+            'prices_id' => 16,
             'cant_min' => 1000,
-            'id_aliquot' => 21,
-            'id_group' => 8,
+            'aliquot_id' => 21,
+            'group_id' => 8,
             'costo' => 1200
 
         ]);
@@ -172,10 +172,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'chorizo',
             'cantidad_prod' => '230',
-            'id_prices' => 16,
+            'prices_id' => 16,
             'cant_min' => 800,
-            'id_aliquot' => 22,
-            'id_group' => 6,
+            'aliquot_id' => 22,
+            'group_id' => 6,
             'costo' => 1200
 
         ]);
@@ -184,10 +184,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'filetes',
             'cantidad_prod' => '250',
-            'id_prices' => 19,
+            'prices_id' => 19,
             'cant_min' => 400,
-            'id_aliquot' => 23,
-            'id_group' => 7,
+            'aliquot_id' => 23,
+            'group_id' => 7,
             'costo' => 3500.40
 
         ]);
@@ -196,10 +196,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'marquezas',
             'cantidad_prod' => '30',
-            'id_prices' => 16,
+            'prices_id' => 16,
             'cant_min' => 10,
-            'id_aliquot' => 24,
-            'id_group' => 8,
+            'aliquot_id' => 24,
+            'group_id' => 8,
             'costo' => 2000.00
 
         ]);

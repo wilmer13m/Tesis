@@ -16,7 +16,7 @@ class RenameColumnsProductsTable extends Migration
         //
         Schema::table('products', function($table)
         {
-            $table->renameColumn('id_prices', 'prices_id');
+            $table->renameColumn('id_prices', 'price_id');
             $table->renameColumn('id_aliquot', 'aliquot_id');
             $table->renameColumn('id_group','group_id');
 
@@ -33,7 +33,7 @@ class RenameColumnsProductsTable extends Migration
     {
         //
         Schema::table('products', function($table) {
-            $table->renameColumn('prices_id', 'id_prices');
+            $table->renameColumn('price_id', 'id_prices');
             $table->renameColumn('aliquot_id', 'id_aliquot ');
             $table->renameColumn('group_id','id_group');
 

@@ -37,6 +37,7 @@ return array(
     'CreateDepartmentsTable' => $baseDir . '/database/migrations/2017_05_01_023153_create_departments_table.php',
     'CreateDetailsTable' => $baseDir . '/database/migrations/2017_05_01_010843_create_details_table.php',
     'CreateFaenasTable' => $baseDir . '/database/migrations/2017_05_01_021037_create_faenas_table.php',
+    'CreateForeignKeyGroupProductsTable' => $baseDir . '/database/migrations/2017_05_04_042647_create_foreign_key_group_products_table.php',
     'CreateGroupsTable' => $baseDir . '/database/migrations/2017_05_01_012136_create_groups_table.php',
     'CreateLocationTable' => $baseDir . '/database/migrations/2017_05_02_023236_create_location_table.php',
     'CreateMaintenanceTable' => $baseDir . '/database/migrations/2017_05_01_013919_create_maintenance_table.php',

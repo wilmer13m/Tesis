@@ -330,6 +330,7 @@ class ComposerStaticInit06ccc0955a309e20806f2ebf741f1cb2
         'CreateDepartmentsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_01_023153_create_departments_table.php',
         'CreateDetailsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_01_010843_create_details_table.php',
         'CreateFaenasTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_01_021037_create_faenas_table.php',
+        'CreateForeignKeyGroupProductsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_04_042647_create_foreign_key_group_products_table.php',
         'CreateGroupsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_01_012136_create_groups_table.php',
         'CreateLocationTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_02_023236_create_location_table.php',
         'CreateMaintenanceTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_01_013919_create_maintenance_table.php',
