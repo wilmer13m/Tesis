@@ -2606,6 +2606,7 @@ return array(
     'Ramsey\\Uuid\\UuidFactory' => $vendorDir . '/ramsey/uuid/src/UuidFactory.php',
     'Ramsey\\Uuid\\UuidFactoryInterface' => $vendorDir . '/ramsey/uuid/src/UuidFactoryInterface.php',
     'Ramsey\\Uuid\\UuidInterface' => $vendorDir . '/ramsey/uuid/src/UuidInterface.php',
+    'RenameColumnsProductsTable' => $baseDir . '/database/migrations/2017_05_04_041921_rename_columns_products_table.php',
     'SebastianBergmann\\CodeCoverage\\CodeCoverage' => $vendorDir . '/phpunit/php-code-coverage/src/CodeCoverage.php',
     'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => $vendorDir . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
     'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => $vendorDir . '/phpunit/php-code-coverage/src/Driver/Driver.php',
