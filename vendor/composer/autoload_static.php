@@ -1074,6 +1074,7 @@ class ComposerStaticInit06ccc0955a309e20806f2ebf741f1cb2
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
+        'ForeingKeyGropupInProductsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_05_002200_foreing_key_gropup_in_products_table.php',
         'GroupsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',

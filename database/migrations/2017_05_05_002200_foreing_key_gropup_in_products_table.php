@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateForeignKeyGroupProductsTable extends Migration
+class ForeingKeyGropupInProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,16 @@ class CreateForeignKeyGroupProductsTable extends Migration
      */
     public function up()
     {
-        //creando una llave foranea para el precio en la tabla producto
+        //haciendo la llave foranea de group_id
         Schema::table('products', function (Blueprint $table) {
-            $table->integer('price_id')->unsigned()->change();
-            $table->foreign('price_id')
+            $table->integer('group_id')->unsigned()->change();
+            $table->foreign('group_id')
                 ->references('id')
-                ->on('prices')
+                ->on('groups')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
+
     }
 
     /**
@@ -32,9 +33,8 @@ class CreateForeignKeyGroupProductsTable extends Migration
     public function down()
     {
         //
-      Schema::table('products', function (Blueprint $table) {
-          $table->dropForeign('products_price_id_foreign');
-      });
-
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropForeign('products_group_id_foreign');
+        });
     }
 }

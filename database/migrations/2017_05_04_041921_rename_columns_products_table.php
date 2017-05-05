@@ -13,7 +13,7 @@ class RenameColumnsProductsTable extends Migration
      */
     public function up()
     {
-        //
+        //cambiando los nombre de los id a la convencion q usa laravel
         Schema::table('products', function($table)
         {
             $table->renameColumn('id_prices', 'price_id');

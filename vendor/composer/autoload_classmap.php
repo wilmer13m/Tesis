@@ -781,6 +781,7 @@ return array(
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
+    'ForeingKeyGropupInProductsTable' => $baseDir . '/database/migrations/2017_05_05_002200_foreing_key_gropup_in_products_table.php',
     'GroupsTableSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'Hamcrest\\Arrays\\IsArray' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
     'Hamcrest\\Arrays\\IsArrayContaining' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',

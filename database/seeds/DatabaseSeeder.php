@@ -15,11 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
+
         // $this->call(UsersTableSeeder::class);
-        $this->call('AliquotTableSeeder');
-        $this->call('PrecioTableSeeder');
-        $this->call('GroupsTableSeeder');
         $this->call('ProductTableSeeder');
+        //$this->call('AliquotTableSeeder');
+        //$this->call('PrecioTableSeeder');
+        //$this->call('GroupsTableSeeder');
 
 
 
@@ -160,10 +162,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'helado',
             'cantidad_prod' => '100',
-            'prices_id' => 16,
+            'price_id' => 3,
             'cant_min' => 1000,
-            'aliquot_id' => 21,
-            'group_id' => 8,
+            'aliquot_id' => 1,
+            'group_id' => 3,
             'costo' => 1200
 
         ]);
@@ -172,10 +174,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'chorizo',
             'cantidad_prod' => '230',
-            'prices_id' => 16,
+            'price_id' => 2,
             'cant_min' => 800,
             'aliquot_id' => 22,
-            'group_id' => 6,
+            'group_id' => 1,
             'costo' => 1200
 
         ]);
@@ -184,10 +186,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'filetes',
             'cantidad_prod' => '250',
-            'prices_id' => 19,
+            'price_id' => 1,
             'cant_min' => 400,
             'aliquot_id' => 23,
-            'group_id' => 7,
+            'group_id' => 2,
             'costo' => 3500.40
 
         ]);
@@ -196,10 +198,10 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'marquezas',
             'cantidad_prod' => '30',
-            'prices_id' => 16,
+            'price_id' => 1,
             'cant_min' => 10,
             'aliquot_id' => 24,
-            'group_id' => 8,
+            'group_id' => 3,
             'costo' => 2000.00
 
         ]);
