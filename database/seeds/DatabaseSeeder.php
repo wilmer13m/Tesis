@@ -21,16 +21,13 @@ class DatabaseSeeder extends Seeder
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
         // $this->call(UsersTableSeeder::class);
-       // $this->call('ProductTableSeeder');
-        //$this->call('AliquotTableSeeder');
-        //$this->call('PrecioTableSeeder');
-        //$this->call('GroupsTableSeeder');
-        //$this->call('RommTableSeeder');
-        //$this->call('ClientTableSeeder');
-        $this->call('RequestTableSeeder');
-
-
-
+         $this->call('AliquotTableSeeder');
+         $this->call('PrecioTableSeeder');
+         $this->call('GroupsTableSeeder');
+         $this->call('ProductTableSeeder');
+         $this->call('RommTableSeeder');
+         $this->call('ClientTableSeeder');
+         $this->call('RequestTableSeeder');
 
 
     }
@@ -344,8 +341,8 @@ class RequestTableSeeder extends Seeder{
             'descripcion' => 'descripcion1',
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
-            'id_client' => 1,
-            'id_room' => 2
+            'client_id' => 1,
+            'room_id' => 2
         ]);
 
         Request::create([
@@ -353,8 +350,8 @@ class RequestTableSeeder extends Seeder{
             'descripcion' => 'descripcion1',
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
-            'id_client' => 1,
-            'id_room' => 2
+            'client_id' => 1,
+            'room_id' => 2
         ]);
 
         Request::create([
@@ -362,8 +359,8 @@ class RequestTableSeeder extends Seeder{
             'descripcion' => 'descripcion1',
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
-            'id_client' => 2,
-            'id_room' => 5
+            'client_id' => 2,
+            'room_id' => 5
         ]);
 
         Request::create([
@@ -371,8 +368,8 @@ class RequestTableSeeder extends Seeder{
             'descripcion' => 'descripcion1',
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
-            'id_client' => 3,
-            'id_room' => 4
+            'client_id' => 3,
+            'room_id' => 4
         ]);
 
         Request::create([
@@ -380,8 +377,8 @@ class RequestTableSeeder extends Seeder{
             'descripcion' => 'descripcion1',
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
-            'id_client' => 4,
-            'id_room' => 3
+            'client_id' => 4,
+            'room_id' => 3
         ]);
 
 

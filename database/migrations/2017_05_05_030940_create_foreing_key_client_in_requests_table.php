@@ -13,7 +13,7 @@ class CreateForeingKeyClientInRequestsTable extends Migration
      */
     public function up()
     {
-        //
+        //añadiendo la llave foranea de id_client en la tabla requests
         Schema::table('requests', function (Blueprint $table) {
             $table->integer('id_client')->unsigned()->change();
             $table->foreign('id_client')
