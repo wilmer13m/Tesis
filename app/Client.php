@@ -10,6 +10,5 @@ class Client extends Model
     function requests(){
 
         return $this->hasMany('App\Request');
-
     }
 }

@@ -7,6 +7,7 @@ use App\Group;
 use App\Product;
 use App\Room;
 use App\Client;
+use App\Request;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,7 +26,8 @@ class DatabaseSeeder extends Seeder
         //$this->call('PrecioTableSeeder');
         //$this->call('GroupsTableSeeder');
         //$this->call('RommTableSeeder');
-        $this->call('ClientTableSeeder');
+        //$this->call('ClientTableSeeder');
+        $this->call('RequestTableSeeder');
 
 
 
@@ -328,6 +330,62 @@ class ClientTableSeeder extends Seeder{
             'profesion' => 'abogado',
             'estado_civil' => 'casado'
         ]);
+    }
+
+}
+
+
+class RequestTableSeeder extends Seeder{
+
+    public function run(){
+
+        Request::create([
+
+            'descripcion' => 'descripcion1',
+            'fecha' => date('Y-m-d h:i:s'),
+            'hora' => '12:00',
+            'id_client' => 1,
+            'id_room' => 2
+        ]);
+
+        Request::create([
+
+            'descripcion' => 'descripcion1',
+            'fecha' => date('Y-m-d h:i:s'),
+            'hora' => '12:00',
+            'id_client' => 1,
+            'id_room' => 2
+        ]);
+
+        Request::create([
+
+            'descripcion' => 'descripcion1',
+            'fecha' => date('Y-m-d h:i:s'),
+            'hora' => '12:00',
+            'id_client' => 2,
+            'id_room' => 5
+        ]);
+
+        Request::create([
+
+            'descripcion' => 'descripcion1',
+            'fecha' => date('Y-m-d h:i:s'),
+            'hora' => '12:00',
+            'id_client' => 3,
+            'id_room' => 4
+        ]);
+
+        Request::create([
+
+            'descripcion' => 'descripcion1',
+            'fecha' => date('Y-m-d h:i:s'),
+            'hora' => '12:00',
+            'id_client' => 4,
+            'id_room' => 3
+        ]);
+
+
+
     }
 
 }

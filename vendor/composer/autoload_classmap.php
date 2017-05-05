@@ -44,6 +44,7 @@ return array(
     'CreateFaenasTable' => $baseDir . '/database/migrations/2017_05_01_021037_create_faenas_table.php',
     'CreateForeignKeyGroupProductsTable' => $baseDir . '/database/migrations/2017_05_04_042647_create_foreign_key_group_products_table.php',
     'CreateForeignKeyHabitcacionInRequestsTable' => $baseDir . '/database/migrations/2017_05_05_013646_create_foreign_key_habitcacion_in_requests_table.php',
+    'CreateForeingKeyClientInRequestsTable' => $baseDir . '/database/migrations/2017_05_05_030940_create_foreing_key_client_in_requests_table.php',
     'CreateGroupsTable' => $baseDir . '/database/migrations/2017_05_01_012136_create_groups_table.php',
     'CreateLocationTable' => $baseDir . '/database/migrations/2017_05_02_023236_create_location_table.php',
     'CreateMaintenanceTable' => $baseDir . '/database/migrations/2017_05_01_013919_create_maintenance_table.php',
