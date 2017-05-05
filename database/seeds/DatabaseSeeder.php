@@ -5,6 +5,8 @@ use App\Aliquot;
 use App\Price;
 use App\Group;
 use App\Product;
+use App\Room;
+use App\Client;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,10 +20,14 @@ class DatabaseSeeder extends Seeder
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
         // $this->call(UsersTableSeeder::class);
-        $this->call('ProductTableSeeder');
+       // $this->call('ProductTableSeeder');
         //$this->call('AliquotTableSeeder');
         //$this->call('PrecioTableSeeder');
         //$this->call('GroupsTableSeeder');
+        //$this->call('RommTableSeeder');
+        $this->call('ClientTableSeeder');
+
+
 
 
 
@@ -208,5 +214,120 @@ class ProductTableSeeder extends Seeder{
 
     }
 
+}
+
+
+class RommTableSeeder extends Seeder{
+
+    public function run(){
+
+        Room::create([
+
+            'numero_habitacion' => '22',
+            'tipo_habitacion' => 'matrimonial',
+            'estatus_habitacion' => 'ocupado',
+        ]);
+
+        Room::create([
+
+            'numero_habitacion' => '19',
+            'tipo_habitacion' => 'matrimonial',
+            'estatus_habitacion' => 'disponible',
+        ]);
+
+
+        Room::create([
+
+            'numero_habitacion' => '100',
+            'tipo_habitacion' => 'individual',
+            'estatus_habitacion' => 'en reparacion',
+        ]);
+
+
+        Room::create([
+
+            'numero_habitacion' => '50',
+            'tipo_habitacion' => 'individual',
+            'estatus_habitacion' => 'disponible',
+        ]);
+
+
+        Room::create([
+
+            'numero_habitacion' => '1',
+            'tipo_habitacion' => 'individual',
+            'estatus_habitacion' => 'disponible',
+        ]);
+    }
+
+}
+
+
+class ClientTableSeeder extends Seeder{
+
+    public function run(){
+
+        Client::create([
+
+            'nombre' => 'Wilmer Mendoza',
+            'cedula' => '20.292.080',
+            'direccion' => 'urb.monteserino San diego, Edo.Carabobo',
+            'telefono' => '0412-348-0288',
+            'email' => 'prueba@hotmail.com',
+            'edad' => 25,
+            'profesion' => 'desarrollador',
+            'estado_civil' => 'soltero'
+        ]);
+
+
+        Client::create([
+
+            'nombre' => 'Andrea Campos',
+            'cedula' => '10.392.030',
+            'direccion' => 'urb.tulipanes, San diego, Edo.Carabobo',
+            'telefono' => '0412-321-9932',
+            'edad' => 33,
+            'email' => 'prueba2@hotmail.com',
+            'profesion' => 'contadora',
+            'estado_civil' => 'casado'
+        ]);
+
+
+        Client::create([
+
+            'nombre' => 'Manelik Gutierrez',
+            'cedula' => '20.102.280',
+            'direccion' => 'Urb.nueva guacara, guacara, Edo.Carabobo',
+            'telefono' => '0416-189-0987',
+            'edad' => 29,
+            'email' => 'prueba3@gmail.com',
+            'profesion' => 'Doctora',
+            'estado_civil' => 'soltero'
+        ]);
+
+        Client::create([
+
+            'nombre' => 'Keilly Smith',
+            'cedula' => '25.929.181',
+            'direccion' => 'los arales, Edo.Carabobo',
+            'telefono' => '0414-345-6543',
+            'edad' => 50,
+            'email' => 'prueba4@hotmail.com',
+            'profesion' => 'comerciante',
+            'estado_civil' => 'soltero'
+        ]);
+
+        Client::create([
+
+            'nombre' => 'Carlos Perez',
+            'cedula' => '11.992.780',
+            'direccion' => 'urb.monteserino San diego, Edo.Carabobo',
+            'telefono' => '0414-098-0222',
+            'edad' => 25,
+            'email' => 'prueba5@hotmail.com',
+            'profesion' => 'abogado',
+            'estado_civil' => 'casado'
+        ]);
+    }
 
 }
