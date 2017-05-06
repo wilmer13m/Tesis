@@ -23,15 +23,15 @@ class DatabaseSeeder extends Seeder
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
         // $this->call(UsersTableSeeder::class);
-         //$this->call('AliquotTableSeeder');
-         //$this->call('PrecioTableSeeder');
-         //$this->call('GroupsTableSeeder');
-         //$this->call('ProductTableSeeder');
-         //$this->call('RommTableSeeder');
-        // $this->call('ClientTableSeeder');
-        // $this->call('RequestTableSeeder');
-        // $this->call('TypeTableSeeder');
-        $this->call('FaenaTableSeeder');
+         $this->call('AliquotTableSeeder');
+         $this->call('PrecioTableSeeder');
+         $this->call('GroupsTableSeeder');
+         $this->call('ProductTableSeeder');
+         $this->call('RommTableSeeder');
+         $this->call('ClientTableSeeder');
+         $this->call('RequestTableSeeder');
+         $this->call('TypeTableSeeder');
+         $this->call('FaenaTableSeeder');
 
 
     }

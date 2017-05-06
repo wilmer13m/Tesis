@@ -20,8 +20,6 @@ class RenameColumnsInFaenasTable extends Migration
             $table->renameColumn('id_aliquot', 'aliquot_id');
             $table->renameColumn('id_type', 'type_id');
 
-
-
         });
     }
 
