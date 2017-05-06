@@ -15,5 +15,10 @@ class Aliquot extends Model
     }
 
 
+    function faenas(){
+
+        return $this->hasMany('App\Faena');
+
+    }
 
 }
