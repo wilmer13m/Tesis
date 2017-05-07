@@ -10,6 +10,9 @@ use App\Client;
 use App\Request;
 use App\Type;
 use App\Faena;
+use App\Department;
+use App\Position;
+use App\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,15 +26,18 @@ class DatabaseSeeder extends Seeder
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
         // $this->call(UsersTableSeeder::class);
-         $this->call('AliquotTableSeeder');
-         $this->call('PrecioTableSeeder');
-         $this->call('GroupsTableSeeder');
-         $this->call('ProductTableSeeder');
-         $this->call('RommTableSeeder');
-         $this->call('ClientTableSeeder');
-         $this->call('RequestTableSeeder');
-         $this->call('TypeTableSeeder');
-         $this->call('FaenaTableSeeder');
+         //$this->call('AliquotTableSeeder');
+         //$this->call('PrecioTableSeeder');
+         //$this->call('GroupsTableSeeder');
+         //$this->call('ProductTableSeeder');
+         //$this->call('RommTableSeeder');
+         //$this->call('ClientTableSeeder');
+         //$this->call('RequestTableSeeder');
+         //$this->call('TypeTableSeeder');
+         //$this->call('FaenaTableSeeder');
+        // $this->call('DepartmentTableSeeder');
+        $this->call('PositionTableSeeder');
+
 
 
     }
@@ -477,6 +483,63 @@ class FaenaTableSeeder extends Seeder{
             'type_id' => 4
         ] );
 
+    }
+
+}
+
+
+class DepartmentTableSeeder extends Seeder{
+
+    public function run(){
+
+        Department::create( [
+
+            'nombre' => 'Administracion'
+        ] );
+
+        Department::create( [
+
+            'nombre' => 'Contabilidad'
+        ] );
+
+        Department::create( [
+
+            'nombre' => 'Recursos humanos'
+        ] );
+
+        Department::create( [
+
+            'nombre' => 'Mantenimiento'
+        ] );
+
+
+    }
+
+
+}
+
+
+class PositionTableSeeder extends Seeder{
+
+    public function run(){
+
+        Position::create( [
+
+            'nombre' => 'Gerente'
+
+        ] );
+
+        Position::create( [
+
+            'nombre' => 'Empleado'
+
+        ] );
+
+        Position::create( [
+
+            'nombre' => 'Obrero'
+
+        ] );
     }
 
 

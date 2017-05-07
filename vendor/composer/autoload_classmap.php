@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AddColumnEmailInClientsTable' => $baseDir . '/database/migrations/2017_05_05_023150_add_column_email_in_clients_table.php',
+    'AddColumnsInUsersTable' => $baseDir . '/database/migrations/2017_05_07_015916_add_columns_in_users_table.php',
     'AliquotTableSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'App\\Aliquot' => $baseDir . '/app/Aliquot.php',
     'App\\Client' => $baseDir . '/app/Client.php',
@@ -45,12 +46,15 @@ return array(
     'CreateDetailsTable' => $baseDir . '/database/migrations/2017_05_01_010843_create_details_table.php',
     'CreateFaenasTable' => $baseDir . '/database/migrations/2017_05_01_021037_create_faenas_table.php',
     'CreateForeignKeyAliquotIdInFaenasTable' => $baseDir . '/database/migrations/2017_05_06_022613_create_foreign_key_aliquot_id_in_faenas_table.php',
+    'CreateForeignKeyDepartmentInUsersTable' => $baseDir . '/database/migrations/2017_05_07_021602_create_foreign_key_department_in_users_table.php',
     'CreateForeignKeyDetailInOrdersTable' => $baseDir . '/database/migrations/2017_05_06_042953_create_foreign_key_detail_in_orders_table.php',
     'CreateForeignKeyGroupProductsTable' => $baseDir . '/database/migrations/2017_05_04_042647_create_foreign_key_group_products_table.php',
     'CreateForeignKeyHabitcacionInRequestsTable' => $baseDir . '/database/migrations/2017_05_05_013646_create_foreign_key_habitcacion_in_requests_table.php',
     'CreateForeignKeyInOrdersTable' => $baseDir . '/database/migrations/2017_05_06_041257_create_foreign_key_in_orders_table.php',
     'CreateForeignKeyOriginInOrdersTable' => $baseDir . '/database/migrations/2017_05_06_043608_create_foreign_key_origin_in_orders_table.php',
+    'CreateForeignKeyPositionInUsersTable' => $baseDir . '/database/migrations/2017_05_07_021803_create_foreign_key_position_in_users_table.php',
     'CreateForeignKeyPriceIdInFaenasTable' => $baseDir . '/database/migrations/2017_05_06_022209_create_foreign_key_price_id_in_faenas_table.php',
+    'CreateForeignKeyRoleInUsersTable' => $baseDir . '/database/migrations/2017_05_07_021044_create_foreign_key_role_in_users_table.php',
     'CreateForeignKeyRoomInOrdersTable' => $baseDir . '/database/migrations/2017_05_06_045137_create_foreign_key_room_in_orders_table.php',
     'CreateForeignKeyTypeIdInFaenasTable' => $baseDir . '/database/migrations/2017_05_06_022956_create_foreign_key_type_id_in_faenas_table.php',
     'CreateForeignKeyUserInOrdersTable' => $baseDir . '/database/migrations/2017_05_06_043926_create_foreign_key_user_in_orders_table.php',
