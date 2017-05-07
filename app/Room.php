@@ -13,4 +13,9 @@ class Room extends Model
 
     }
 
+    public function reservation(){
+
+        return $this->belongsTo('App\Reservation');
+    }
+
 }
