@@ -25,18 +25,18 @@ class DatabaseSeeder extends Seeder
     {
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
-        // $this->call(UsersTableSeeder::class);
-         //$this->call('AliquotTableSeeder');
-         //$this->call('PrecioTableSeeder');
-         //$this->call('GroupsTableSeeder');
-         //$this->call('ProductTableSeeder');
-         //$this->call('RommTableSeeder');
-         //$this->call('ClientTableSeeder');
-         //$this->call('RequestTableSeeder');
-         //$this->call('TypeTableSeeder');
-         //$this->call('FaenaTableSeeder');
-        // $this->call('DepartmentTableSeeder');
-        $this->call('PositionTableSeeder');
+         //$this->call(UsersTableSeeder::class);
+         $this->call('AliquotTableSeeder');
+         $this->call('PrecioTableSeeder');
+         $this->call('GroupsTableSeeder');
+         $this->call('ProductTableSeeder');
+         $this->call('RommTableSeeder');
+         $this->call('ClientTableSeeder');
+         $this->call('RequestTableSeeder');
+         $this->call('TypeTableSeeder');
+         $this->call('FaenaTableSeeder');
+         $this->call('DepartmentTableSeeder');
+         $this->call('PositionTableSeeder');
 
 
 
@@ -191,7 +191,7 @@ class ProductTableSeeder extends Seeder{
             'cantidad_prod' => '230',
             'price_id' => 2,
             'cant_min' => 800,
-            'aliquot_id' => 22,
+            'aliquot_id' => 2,
             'group_id' => 1,
             'costo' => 1200
 
@@ -203,7 +203,7 @@ class ProductTableSeeder extends Seeder{
             'cantidad_prod' => '250',
             'price_id' => 1,
             'cant_min' => 400,
-            'aliquot_id' => 23,
+            'aliquot_id' => 2,
             'group_id' => 2,
             'costo' => 3500.40
 
@@ -215,7 +215,7 @@ class ProductTableSeeder extends Seeder{
             'cantidad_prod' => '30',
             'price_id' => 1,
             'cant_min' => 10,
-            'aliquot_id' => 24,
+            'aliquot_id' => 3,
             'group_id' => 3,
             'costo' => 2000.00
 
