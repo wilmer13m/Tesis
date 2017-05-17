@@ -2,17 +2,15 @@
 
 use Illuminate\Database\Seeder;
 use App\Aliquot;
-use App\Price;
-use App\Group;
 use App\Product;
 use App\Room;
 use App\Client;
 use App\Request;
-use App\Type;
 use App\Faena;
 use App\Department;
 use App\Position;
 use App\Role;
+use App\Detail;
 
 class DatabaseSeeder extends Seeder
 {
@@ -34,7 +32,7 @@ class DatabaseSeeder extends Seeder
          $this->call('FaenaTableSeeder');
          $this->call('DepartmentTableSeeder');
          $this->call('PositionTableSeeder');
-
+         //$this->call('RoleTableSeeder');
 
     }
 }
@@ -420,6 +418,42 @@ class PositionTableSeeder extends Seeder{
 
         ] );
     }
+
+
+}
+
+class RoleTableSeeder extends Seeder
+{
+
+    public function run()
+    {
+
+        Role::create([
+            'nombre' => 'Administrador'
+        ]);
+
+
+        Role::create([
+            'nombre' => 'Gerente'
+        ]);
+
+
+        Role::create([
+            'nombre' => 'Empleado'
+        ]);
+
+        Role::create([
+            'nombre' => 'Cliente'
+        ]);
+
+    }
+
+}
+
+
+class DetailTableSeeder extends Seeder{
+
+
 
 
 }
