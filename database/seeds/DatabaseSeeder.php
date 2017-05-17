@@ -27,17 +27,13 @@ class DatabaseSeeder extends Seeder
 
          //$this->call(UsersTableSeeder::class);
          $this->call('AliquotTableSeeder');
-         $this->call('PrecioTableSeeder');
-         $this->call('GroupsTableSeeder');
          $this->call('ProductTableSeeder');
          $this->call('RommTableSeeder');
          $this->call('ClientTableSeeder');
          $this->call('RequestTableSeeder');
-         $this->call('TypeTableSeeder');
          $this->call('FaenaTableSeeder');
          $this->call('DepartmentTableSeeder');
          $this->call('PositionTableSeeder');
-
 
 
     }
@@ -50,121 +46,31 @@ class AliquotTableSeeder extends Seeder{
     public function run(){
 
         Aliquot::create( [
-            'tipo' => 'tipo 1',
-            'valor'=> 15
+            'tipo' => 'A',
+            'valor'=> 12
 
         ] );
 
 
         Aliquot::create( [
-            'tipo' => 'tipo 2',
-            'valor'=> 10
-
-        ] );
-
-
-        Aliquot::create( [
-            'tipo' => 'tipo 3',
-            'valor'=> 5
-
-        ] );
-
-
-        Aliquot::create( [
-            'tipo' => 'tipo 4',
+            'tipo' => 'B',
             'valor'=> 8
 
         ] );
 
+
+        Aliquot::create( [
+            'tipo' => 'C',
+            'valor'=> 0
+
+        ] );
+
     }
 
 }
 
 
 
-
-class PrecioTableSeeder extends Seeder{
-
-    public function run(){
-
-        Price::create( [
-            'valor' => 1890.5,
-            'porcentaje_utilidades' => '15%'
-
-        ] );
-
-        Price::create( [
-            'valor' => 130.00,
-            'porcentaje_utilidades' => '20%'
-
-        ] );
-
-
-        Price::create( [
-            'valor' => 4590.33,
-            'porcentaje_utilidades' => '5%'
-
-        ] );
-
-
-        Price::create( [
-            'valor' => 1000.2,
-            'porcentaje_utilidades' => '10%'
-
-        ] );
-
-
-
-
-        Price::create( [
-            'valor' => 1000.0,
-            'porcentaje_utilidades' => '8%'
-
-        ] );
-
-    }
-
-
-}
-
-
-class GroupsTableSeeder extends Seeder{
-
-    public function run(){
-
-        Group::create( [
-
-            'nombre' => 'embutidos'
-
-        ] );
-
-        Group::create( [
-
-            'nombre' => 'carnes'
-
-        ] );
-
-
-        Group::create( [
-
-            'nombre' => 'postres'
-
-        ] );
-
-        Group::create( [
-
-            'nombre' => 'bebidas'
-
-        ] );
-
-        Group::create( [
-
-            'nombre' => 'frutas'
-
-        ] );
-    }
-
-}
 
 
 
@@ -177,47 +83,46 @@ class ProductTableSeeder extends Seeder{
 
             'nombre' => 'helado',
             'cantidad_prod' => '100',
-            'price_id' => 3,
+            'precio' => 3000, //solo precio entereo 1428
             'cant_min' => 1000,
             'aliquot_id' => 1,
-            'group_id' => 3,
-            'costo' => 1200
+            'costo' => 1000,
+            'porcentaje_utilidad' => 30                    //porcentaje utilidad entero 30 porcentaje
 
         ]);
-
         Product::create([
 
-            'nombre' => 'chorizo',
-            'cantidad_prod' => '230',
-            'price_id' => 2,
-            'cant_min' => 800,
-            'aliquot_id' => 2,
-            'group_id' => 1,
-            'costo' => 1200
+            'nombre' => 'chorizos',
+            'cantidad_prod' => '1032',
+            'precio' => 5500, //solo precio entereo 1428
+            'cant_min' => 1000,
+            'aliquot_id' => 1,
+            'costo' => 1000,
+            'porcentaje_utilidad' => 30                    //porcentaje utilidad entero 30 porcentaje
 
         ]);
 
         Product::create([
 
             'nombre' => 'filetes',
-            'cantidad_prod' => '250',
-            'price_id' => 1,
-            'cant_min' => 400,
-            'aliquot_id' => 2,
-            'group_id' => 2,
-            'costo' => 3500.40
+            'cantidad_prod' => '100',
+            'precio' => 3000, //solo precio entereo 1428
+            'cant_min' => 1000,
+            'aliquot_id' => 3,
+            'costo' => 1000,
+            'porcentaje_utilidad' => 30                    //porcentaje utilidad entero 30 porcentaje
 
         ]);
 
         Product::create([
 
-            'nombre' => 'marquezas',
-            'cantidad_prod' => '30',
-            'price_id' => 1,
-            'cant_min' => 10,
-            'aliquot_id' => 3,
-            'group_id' => 3,
-            'costo' => 2000.00
+            'nombre' => 'alas de pollo',
+            'cantidad_prod' => '340',
+            'precio' => 3000, //solo precio entereo 1428
+            'cant_min' => 1000,
+            'aliquot_id' => 2,
+            'costo' => 1000,
+            'porcentaje_utilidad' => 30                    //porcentaje utilidad entero 30 porcentaje
 
         ]);
 
@@ -398,42 +303,6 @@ class RequestTableSeeder extends Seeder{
 }
 
 
-class TypeTableSeeder extends Seeder{
-
-    public function run(){
-
-        Type::create( [
-
-            'nombre' => 'toallas'
-        ] );
-
-
-        Type::create( [
-
-            'nombre' => 'jabones'
-        ] );
-
-
-        Type::create( [
-
-            'nombre' => 'sabanas'
-        ] );
-
-
-        Type::create( [
-
-            'nombre' => 'almohadas'
-        ] );
-
-        Type::create( [
-
-            'nombre' => 'batas'
-        ] );
-
-    }
-
-}
-
 
 class FaenaTableSeeder extends Seeder{
 
@@ -443,44 +312,48 @@ class FaenaTableSeeder extends Seeder{
 
             'nombre' => 'toallas para limpiarse la cara',
             'cantidad' => 122,
-            'price_id' => 1,
+            'precio' => 3800,
             'cantidad_min' => 100,
             'aliquot_id' => 2,
             'costo' => 1200.90,
-            'type_id' => 1
+            'porcentaje_utilidad' => 30
         ] );
 
         Faena::create( [
 
             'nombre' => 'toallas grandes',
             'cantidad' => 10,
-            'price_id' => 2,
+            'precio' => 2, //precio
             'cantidad_min' => 90,
-            'aliquot_id' => 2,
+            'aliquot_id' => 2, //
             'costo' => 1000.90,
-            'type_id' => 1
+            'porcentaje_utilidad' => 30
+
         ] );
 
         Faena::create( [
 
             'nombre' => 'cubre camas',
             'cantidad' => 500,
-            'price_id' => 4,
+            'precio' => 4,
             'cantidad_min' => 250,
             'aliquot_id' => 1,
             'costo' => 40000.90,
-            'type_id' => 3
+            'porcentaje_utilidad' => 30
+
         ] );
 
         Faena::create( [
 
             'nombre' => 'almohadas grandes para camas matrimonial',
             'cantidad' => 100,
-            'price_id' => 4,
+            'precio' => 4,
             'cantidad_min' => 50,
-            'aliquot_id' => 4,
+            'aliquot_id' => 2,
             'costo' => 100000,
-            'type_id' => 4
+            'porcentaje_utilidad' => 30
+
+            //agregar utlidida a faena entero 2 digitos
         ] );
 
     }
@@ -499,12 +372,12 @@ class DepartmentTableSeeder extends Seeder{
 
         Department::create( [
 
-            'nombre' => 'Contabilidad'
+            'nombre' => 'Restaurant'
         ] );
 
         Department::create( [
 
-            'nombre' => 'Recursos humanos'
+                'nombre' => 'Recepcion'
         ] );
 
         Department::create( [
@@ -525,6 +398,12 @@ class PositionTableSeeder extends Seeder{
 
         Position::create( [
 
+            'nombre' => 'Administrador'
+
+        ] );
+
+        Position::create( [
+
             'nombre' => 'Gerente'
 
         ] );
@@ -537,7 +416,7 @@ class PositionTableSeeder extends Seeder{
 
         Position::create( [
 
-            'nombre' => 'Obrero'
+            'nombre' => 'Cliente'
 
         ] );
     }
