@@ -11,4 +11,10 @@ class Order extends Model
     {
         return $this->hasMany('App\Detail');
     }
+
+    public function origin(){
+
+        return $this->belongsTo('App\Origin');
+
+    }
 }

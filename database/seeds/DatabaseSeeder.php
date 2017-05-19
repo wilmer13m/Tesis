@@ -9,8 +9,12 @@ use App\Request;
 use App\Faena;
 use App\Department;
 use App\Position;
-use App\Role;
 use App\Detail;
+use App\Order;
+use App\origin;
+use App\User;
+use App\Location;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,8 +27,7 @@ class DatabaseSeeder extends Seeder
     {
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
-         //$this->call(UsersTableSeeder::class);
-         $this->call('AliquotTableSeeder');
+         /*$this->call('AliquotTableSeeder');
          $this->call('ProductTableSeeder');
          $this->call('RommTableSeeder');
          $this->call('ClientTableSeeder');
@@ -32,10 +35,17 @@ class DatabaseSeeder extends Seeder
          $this->call('FaenaTableSeeder');
          $this->call('DepartmentTableSeeder');
          $this->call('PositionTableSeeder');
-         //$this->call('RoleTableSeeder');
+         $this->call('UserTableSeeder');
+         $this->call('OriginTableSeeder');
+         $this->call('OrderTableSeeder');
+         $this->call('DetailTableSeeder');*/
+         $this->call('LocationTableSeeder');
 
     }
 }
+
+
+
 
 
 
@@ -66,10 +76,6 @@ class AliquotTableSeeder extends Seeder{
     }
 
 }
-
-
-
-
 
 
 class ProductTableSeeder extends Seeder{
@@ -255,7 +261,9 @@ class RequestTableSeeder extends Seeder{
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
             'client_id' => 1,
-            'room_id' => 2
+            'room_id' => 2,
+            'exento' => 100
+
         ]);
 
         Request::create([
@@ -264,7 +272,9 @@ class RequestTableSeeder extends Seeder{
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
             'client_id' => 1,
-            'room_id' => 2
+            'room_id' => 2,
+            'exento' => 200
+
         ]);
 
         Request::create([
@@ -273,7 +283,9 @@ class RequestTableSeeder extends Seeder{
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
             'client_id' => 2,
-            'room_id' => 5
+            'room_id' => 5,
+            'exento' => 300
+
         ]);
 
         Request::create([
@@ -282,7 +294,8 @@ class RequestTableSeeder extends Seeder{
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
             'client_id' => 3,
-            'room_id' => 4
+            'room_id' => 4,
+            'exento' => 400
         ]);
 
         Request::create([
@@ -291,7 +304,9 @@ class RequestTableSeeder extends Seeder{
             'fecha' => date('Y-m-d h:i:s'),
             'hora' => '12:00',
             'client_id' => 4,
-            'room_id' => 3
+            'room_id' => 3,
+            'exento' => 400
+
         ]);
 
 
@@ -299,7 +314,6 @@ class RequestTableSeeder extends Seeder{
     }
 
 }
-
 
 
 class FaenaTableSeeder extends Seeder{
@@ -419,31 +433,68 @@ class PositionTableSeeder extends Seeder{
         ] );
     }
 
+}
+
+
+class OriginTableSeeder extends Seeder{
+
+    public function run(){
+
+        Origin::create([
+            'tipo_origen' => 'movil'
+        ]);
+
+        Origin::create([
+            'tipo_origen' => 'habitacion'
+        ]);
+
+        Origin::create([
+            'tipo_origen' => 'restaurant'
+        ]);
+    }
 
 }
 
-class RoleTableSeeder extends Seeder
-{
 
-    public function run()
-    {
+class UserTableSeeder extends Seeder{
 
-        Role::create([
-            'nombre' => 'Administrador'
+    public function run(){
+
+        User::create([
+
+            'name' => 'karime',
+            'email' => 'karime@prueba.com',
+            'password' => '1234',
+            'department_id' => 3,
+            'position_id' => 2
+        ]);
+
+        User::create([
+
+            'name' => 'mane',
+            'email' => 'mane@prueba.com',
+            'password' => '1235',
+            'department_id' => 3,
+            'position_id' => 2
         ]);
 
 
-        Role::create([
-            'nombre' => 'Gerente'
+        User::create([
+
+            'name' => 'danik',
+            'email' => 'danik@prueba.com',
+            'password' => '1236',
+            'department_id' => 3,
+            'position_id' => 2
         ]);
 
+        User::create([
 
-        Role::create([
-            'nombre' => 'Empleado'
-        ]);
-
-        Role::create([
-            'nombre' => 'Cliente'
+            'name' => 'brenda',
+            'email' => 'brenda@prueba.com',
+            'password' => '1237',
+            'department_id' => 3,
+            'position_id' => 2
         ]);
 
     }
@@ -451,9 +502,112 @@ class RoleTableSeeder extends Seeder
 }
 
 
+class OrderTableSeeder extends Seeder{
+
+        public function run(){
+
+            Order::create([
+
+                'client_id' => 3,
+                'origin_id' => 1,
+                'user_id' => 2,
+                'fecha_orden' => date('Y-m-d h:i:s'),
+                'hora' => '13:40:00',
+                'room_id' => 2,
+                'estatus' => 'en ejecucion',
+                'gravado' => '1000',
+                'iva' => '120',
+                'total' => '1220',
+                'exento' => 100
+
+            ]);
+
+
+
+        }
+
+}
+
+
 class DetailTableSeeder extends Seeder{
 
+    public function run(){
 
+        Detail::create([
+
+            'order_id' => 1,
+            'cantidad_prod' => 1,
+            'descripcion_prod' => 'helado',
+            'exento' => 0,
+            'gravado_orden' => 1000,
+            'impuesto' => 120,
+            'aliquot_id' => 1,
+            'total' => 1120
+
+        ]);
+
+
+        Detail::create([
+
+            'order_id' => 1,
+            'cantidad_prod' => 1,
+            'descripcion_prod' => 'agua mineral',
+            'exento' => 100,
+            'gravado_orden' => 0,
+            'impuesto' => 0,
+            'aliquot_id' => 3,
+            'total' => 100
+
+        ]);
+    }
+
+}
+
+
+class LocationTableSeeder extends Seeder{
+
+    public function run(){
+
+        Location::create([
+
+            'nombre' => 'piscinas',
+            'descripcion' => 'se incluyen todas las piscinas del hotel'
+
+        ]);
+
+        Location::create([
+
+            'nombre' => 'habitaciones',
+            'descripcion' => 'se refiere a todas las habitaciones del hotel sin distingir tipos'
+
+        ]);
+
+
+        Location::create([
+
+            'nombre' => 'oficinas',
+            'descripcion' => 'incluye todas las habitaciones del hotel tanto las que estan adentro como las que estan en los exteriores'
+
+        ]);
+
+
+        Location::create([
+
+            'nombre' => 'recepcion',
+            'descripcion' => 'area principal donde se hacen las reservaciones, solo hay una'
+
+
+        ]);
+
+        Location::create([
+
+            'nombre' => 'restaurant',
+            'descripcion' => 'descripcion restaurante'
+
+
+        ]);
+
+    }
 
 
 }
