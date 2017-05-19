@@ -14,6 +14,7 @@ use App\Order;
 use App\origin;
 use App\User;
 use App\Location;
+use App\Maintenance;
 
 
 class DatabaseSeeder extends Seeder
@@ -27,7 +28,7 @@ class DatabaseSeeder extends Seeder
     {
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
-         /*$this->call('AliquotTableSeeder');
+         $this->call('AliquotTableSeeder');
          $this->call('ProductTableSeeder');
          $this->call('RommTableSeeder');
          $this->call('ClientTableSeeder');
@@ -38,8 +39,9 @@ class DatabaseSeeder extends Seeder
          $this->call('UserTableSeeder');
          $this->call('OriginTableSeeder');
          $this->call('OrderTableSeeder');
-         $this->call('DetailTableSeeder');*/
+         $this->call('DetailTableSeeder');
          $this->call('LocationTableSeeder');
+        $this->call('MaintanenceTableSeeder');
 
     }
 }
@@ -604,6 +606,48 @@ class LocationTableSeeder extends Seeder{
             'nombre' => 'restaurant',
             'descripcion' => 'descripcion restaurante'
 
+
+        ]);
+
+    }
+
+
+}
+
+
+class MaintanenceTableSeeder extends Seeder{
+
+    public function run(){
+
+        Maintenance::create([
+
+            'ejecutor' => 'wilmer y arturo',
+            'estatus' => 'en ejecucion',
+            'fecha_emision' => date('Y-m-d h:i:s'),
+            'hora_emision' => '12:00:00',
+            'fecha_ejecucion' => date('Y-m-d h:i:s'),
+            'hora_ejecucion' => '13:00:00',
+            'location_id' => 1,
+            'descripcion_mant' => 'cambiar el agua de las piscinas',
+            'prioridad' => 1,
+            'user_id' => 2,
+
+        ]);
+
+
+
+        Maintenance::create([
+
+            'ejecutor' => 'ariana',
+            'estatus' => 'terminado',
+            'fecha_emision' => date('Y-m-d h:i:s'),
+            'hora_emision' => '10:00:00',
+            'fecha_ejecucion' => date('Y-m-d h:i:s'),
+            'hora_ejecucion' => '13:45:10',
+            'location_id' => 2,
+            'descripcion_mant' => 'limpieza de oficinas',
+            'prioridad' => 2,
+            'user_id' => 2,
 
         ]);
 
