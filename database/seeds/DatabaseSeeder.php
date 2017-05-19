@@ -15,6 +15,7 @@ use App\origin;
 use App\User;
 use App\Location;
 use App\Maintenance;
+use App\Reservation;
 
 
 class DatabaseSeeder extends Seeder
@@ -28,7 +29,7 @@ class DatabaseSeeder extends Seeder
     {
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
-         $this->call('AliquotTableSeeder');
+         /*$this->call('AliquotTableSeeder');
          $this->call('ProductTableSeeder');
          $this->call('RommTableSeeder');
          $this->call('ClientTableSeeder');
@@ -41,7 +42,8 @@ class DatabaseSeeder extends Seeder
          $this->call('OrderTableSeeder');
          $this->call('DetailTableSeeder');
          $this->call('LocationTableSeeder');
-        $this->call('MaintanenceTableSeeder');
+         $this->call('MaintanenceTableSeeder');*/
+         $this->call('ReservationTableSeeder');
 
     }
 }
@@ -653,5 +655,30 @@ class MaintanenceTableSeeder extends Seeder{
 
     }
 
+
+}
+
+
+class ReservationTableSeeder extends Seeder{
+
+    public function run(){
+
+        Reservation::create([
+            'fecha_creacion' => date('Y-m-d h:i:s'),
+            'inicio_reservacion' => date('Y-m-d h:i:s'),
+            'fin_reservacion' => date('Y-m-d h:i:s'),
+            'client_id' => 1,
+            'user_id' => 3,
+            'room_id' => 2,
+            'estado_reservacion' => 'activa',
+            'numero_orden' => '1',
+            'estatus' => 'estatus1',
+            'gravado' => 100,
+            'iva' => '120',
+            'total'=>1230
+
+        ]);
+
+    }
 
 }
