@@ -724,6 +724,7 @@ class ComposerStaticInit06ccc0955a309e20806f2ebf741f1cb2
         'DropColumnNumeroOrdenInTableOrders' => __DIR__ . '/../..' . '/database/migrations/2017_05_19_011101_drop_column_numeroOrden_in_table_orders.php',
         'DropColumnProductTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_03_221109_drop_column_product_table.php',
         'DropColumnStringInClientsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_05_024910_drop_column_string_in_clients_table.php',
+        'DropColumnsInReservationsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_20_024225_drop_columns_in_reservations_table.php',
         'DropForeignKeyDetailInOrderTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_18_025252_drop_foreign_key_detail_in_order_table.php',
         'DropGroupsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_11_023045_drop_groups_table.php',
         'DropPricesTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_11_022907_drop_prices_table.php',

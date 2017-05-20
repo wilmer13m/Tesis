@@ -670,9 +670,7 @@ class ReservationTableSeeder extends Seeder{
             'client_id' => 1,
             'user_id' => 3,
             'room_id' => 2,
-            'estado_reservacion' => 'activa',
-            'numero_orden' => '1',
-            'estatus' => 'estatus1',
+            'estatus' => 'activa',
             'gravado' => 100,
             'iva' => '120',
             'total'=>1230
