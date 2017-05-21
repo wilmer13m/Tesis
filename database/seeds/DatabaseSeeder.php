@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
     {
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
-         /*$this->call('AliquotTableSeeder');
+         $this->call('AliquotTableSeeder');
          $this->call('ProductTableSeeder');
          $this->call('RommTableSeeder');
          $this->call('ClientTableSeeder');
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
          $this->call('OrderTableSeeder');
          $this->call('DetailTableSeeder');
          $this->call('LocationTableSeeder');
-         $this->call('MaintanenceTableSeeder');*/
+         $this->call('MaintanenceTableSeeder');
          $this->call('ReservationTableSeeder');
 
     }
@@ -470,7 +470,7 @@ class UserTableSeeder extends Seeder{
             'email' => 'karime@prueba.com',
             'password' => '1234',
             'department_id' => 3,
-            'position_id' => 2
+            'rol' => 'empleado'
         ]);
 
         User::create([
@@ -479,7 +479,7 @@ class UserTableSeeder extends Seeder{
             'email' => 'mane@prueba.com',
             'password' => '1235',
             'department_id' => 3,
-            'position_id' => 2
+            'rol' => "administradoe"
         ]);
 
 
@@ -489,7 +489,7 @@ class UserTableSeeder extends Seeder{
             'email' => 'danik@prueba.com',
             'password' => '1236',
             'department_id' => 3,
-            'position_id' => 2
+            'rol' => 'gerente'
         ]);
 
         User::create([
@@ -498,7 +498,7 @@ class UserTableSeeder extends Seeder{
             'email' => 'brenda@prueba.com',
             'password' => '1237',
             'department_id' => 3,
-            'position_id' => 2
+            'rol' => 'cliente'
         ]);
 
     }
