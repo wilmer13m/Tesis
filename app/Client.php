@@ -16,4 +16,10 @@ class Client extends Model
 
         return $this->belongsTo('App\Reservation');
     }
+
+    public function solicitude(){
+
+        return $this->hasMany('App\Solicitude');
+
+    }
 }

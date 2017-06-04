@@ -16,7 +16,7 @@ class CreateSolicitudesTable extends Migration
         //
         Schema::create('solicitudes', function (Blueprint $table) {
 
-            $table->integer('id')->unsigned();
+            $table->increments('id')->unsigned();
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')
                 ->references('id')

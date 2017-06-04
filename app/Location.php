@@ -11,4 +11,9 @@ class Location extends Model
 
         return $this->hasMany('App\Maintenance');
     }
+
+    public function solicitudes(){
+
+        return $this->hasMany('\App\Solicitude');
+    }
 }

@@ -16,6 +16,7 @@ use App\User;
 use App\Location;
 use App\Maintenance;
 use App\Reservation;
+use App\Solicitude;
 
 
 class DatabaseSeeder extends Seeder
@@ -29,7 +30,7 @@ class DatabaseSeeder extends Seeder
     {
         //Nota: primero ejecuta los seeders de las tablas maestras, luego comentalos y ejecuta el de las tablas hijas
 
-         $this->call('AliquotTableSeeder');
+         /*$this->call('AliquotTableSeeder');
          $this->call('ProductTableSeeder');
          $this->call('RommTableSeeder');
          $this->call('ClientTableSeeder');
@@ -42,7 +43,8 @@ class DatabaseSeeder extends Seeder
          $this->call('DetailTableSeeder');
          $this->call('LocationTableSeeder');
          $this->call('MaintanenceTableSeeder');
-         $this->call('ReservationTableSeeder');
+         $this->call('ReservationTableSeeder');*/
+         $this->call('SolicitudeTableSeeder');
 
     }
 }
@@ -197,7 +199,9 @@ class ClientTableSeeder extends Seeder{
             'email' => 'prueba@hotmail.com',
             'edad' => 25,
             'profesion' => 'desarrollador',
-            'estado_civil' => 'soltero'
+            'estado_civil' => 'soltero',
+            'password' => bcrypt('secret')
+
         ]);
 
 
@@ -210,7 +214,9 @@ class ClientTableSeeder extends Seeder{
             'edad' => 33,
             'email' => 'prueba2@hotmail.com',
             'profesion' => 'contadora',
-            'estado_civil' => 'casado'
+            'estado_civil' => 'casado',
+            'password' => bcrypt('secret2')
+
         ]);
 
 
@@ -223,7 +229,9 @@ class ClientTableSeeder extends Seeder{
             'edad' => 29,
             'email' => 'prueba3@gmail.com',
             'profesion' => 'Doctora',
-            'estado_civil' => 'soltero'
+            'estado_civil' => 'soltero',
+            'password' => bcrypt('secret3')
+
         ]);
 
         Client::create([
@@ -235,7 +243,9 @@ class ClientTableSeeder extends Seeder{
             'edad' => 50,
             'email' => 'prueba4@hotmail.com',
             'profesion' => 'comerciante',
-            'estado_civil' => 'soltero'
+            'estado_civil' => 'soltero',
+            'password' => bcrypt('secret4')
+
         ]);
 
         Client::create([
@@ -247,7 +257,9 @@ class ClientTableSeeder extends Seeder{
             'edad' => 25,
             'email' => 'prueba5@hotmail.com',
             'profesion' => 'abogado',
-            'estado_civil' => 'casado'
+            'estado_civil' => 'casado',
+            'password' => bcrypt('secret5')
+
         ]);
     }
 
@@ -677,5 +689,42 @@ class ReservationTableSeeder extends Seeder{
         ]);
 
     }
+
+}
+
+
+class SolicitudeTableSeeder extends Seeder{
+
+    public function run(){
+
+        Solicitude::create([
+
+            'client_id' => '1',
+            'location_id' => '2',
+            'descripcion' => 'el baño de mi habitacion no funciona',
+            'estatus' => 'procesando'
+        ]);
+
+        Solicitude::create([
+
+            'client_id' => '2',
+            'location_id' => '2',
+            'descripcion' => 'no han cambiado las sabanas de la habitacion',
+            'estatus' => 'procesando'
+        ]);
+
+        Solicitude::create([
+
+            'client_id' => '1',
+            'location_id' => '2',
+            'descripcion' => 'el aire acondiciando de la habitacion no enfria',
+            'estatus' => 'procesando'
+        ]);
+
+
+    }
+
+
+
 
 }
