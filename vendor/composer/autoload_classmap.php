@@ -94,6 +94,7 @@ return array(
     'CreateReservationsTable' => $baseDir . '/database/migrations/2017_05_01_005940_create_reservations_table.php',
     'CreateRolesTable' => $baseDir . '/database/migrations/2017_05_02_024551_create_roles_table.php',
     'CreateRoomsTable' => $baseDir . '/database/migrations/2017_04_30_225223_create_rooms_table.php',
+    'CreateSolicitudesTable' => $baseDir . '/database/migrations/2017_06_04_031013_create_solicitudes_table.php',
     'CreateTypesTable' => $baseDir . '/database/migrations/2017_05_01_021852_create_types_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'Cron\\AbstractField' => $vendorDir . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
