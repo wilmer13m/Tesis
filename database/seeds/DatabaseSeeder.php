@@ -36,7 +36,6 @@ class DatabaseSeeder extends Seeder
          $this->call('RequestTableSeeder');
          $this->call('FaenaTableSeeder');
          $this->call('DepartmentTableSeeder');
-         $this->call('PositionTableSeeder');
          $this->call('UserTableSeeder');
          $this->call('OriginTableSeeder');
          $this->call('OrderTableSeeder');

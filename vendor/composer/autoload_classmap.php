@@ -11,6 +11,7 @@ return array(
     'AddColumnExentoInTableRequests' => $baseDir . '/database/migrations/2017_05_19_011427_add_column_exento_in_table_requests.php',
     'AddColumnsInUsersTable' => $baseDir . '/database/migrations/2017_05_07_015916_add_columns_in_users_table.php',
     'AddForeignKeyOrderInTableDetails' => $baseDir . '/database/migrations/2017_05_19_012733_add_foreign_key_order_in_table_details.php',
+    'AddPasswordColumnInClientTable' => $baseDir . '/database/migrations/2017_05_28_221922_add_password_column_in_client_table.php',
     'AddingColumnPriceInFaenasTable' => $baseDir . '/database/migrations/2017_05_17_014822_adding_column_price_in_faenas_table.php',
     'AddingColumnPriceInProductsTable' => $baseDir . '/database/migrations/2017_05_17_014212_adding_column_price_in_products_table.php',
     'AliquotTableSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

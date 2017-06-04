@@ -304,6 +304,7 @@ class ComposerStaticInit06ccc0955a309e20806f2ebf741f1cb2
         'AddColumnExentoInTableRequests' => __DIR__ . '/../..' . '/database/migrations/2017_05_19_011427_add_column_exento_in_table_requests.php',
         'AddColumnsInUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_07_015916_add_columns_in_users_table.php',
         'AddForeignKeyOrderInTableDetails' => __DIR__ . '/../..' . '/database/migrations/2017_05_19_012733_add_foreign_key_order_in_table_details.php',
+        'AddPasswordColumnInClientTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_28_221922_add_password_column_in_client_table.php',
         'AddingColumnPriceInFaenasTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_17_014822_adding_column_price_in_faenas_table.php',
         'AddingColumnPriceInProductsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_17_014212_adding_column_price_in_products_table.php',
         'AliquotTableSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
