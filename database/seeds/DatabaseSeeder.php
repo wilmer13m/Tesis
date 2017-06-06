@@ -702,15 +702,15 @@ class SolicitudeTableSeeder extends Seeder{
             'client_id' => '1',
             'location_id' => '2',
             'descripcion' => 'el baño de mi habitacion no funciona',
-            'estatus' => 'procesando'
+            'estatus' => 'Procesando'
         ]);
 
-        Solicitude::create([
+     /*   Solicitude::create([
 
             'client_id' => '2',
             'location_id' => '2',
             'descripcion' => 'no han cambiado las sabanas de la habitacion',
-            'estatus' => 'procesando'
+            'estatus' => 'Procesando'
         ]);
 
         Solicitude::create([
@@ -718,8 +718,8 @@ class SolicitudeTableSeeder extends Seeder{
             'client_id' => '1',
             'location_id' => '2',
             'descripcion' => 'el aire acondiciando de la habitacion no enfria',
-            'estatus' => 'procesando'
-        ]);
+            'estatus' => 'Procesando'
+        ]);*/
 
 
     }

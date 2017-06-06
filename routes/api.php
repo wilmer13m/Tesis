@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('clients', 'ClientController');
 Route::resource('clients.solicitudes', 'ClientSolicitudeController');
+
+Route::resource('locations', 'LocationController');

@@ -22,4 +22,9 @@ class Client extends Model
         return $this->hasMany('App\Solicitude');
 
     }
+
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
 }
