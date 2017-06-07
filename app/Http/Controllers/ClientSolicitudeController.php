@@ -117,4 +117,28 @@ class ClientSolicitudeController extends Controller
 
     }
 
+
+    //eliminar una tarea en particular de un proyecto
+    public function destroy($clientId, $solicitudeId)
+    {
+
+        try{
+
+            $solicitude = Solicitude::findOrFail($solicitudeId);
+            if(!$solicitude){
+
+                return response()->json(['estatus'=>false,'message'=>'This id dosent exist'],404);
+            }
+
+            $solicitude->delete();
+            return response()->json(['estatus'=>true,'message'=>'borrado'],200);
+
+        }catch(\Exception $e){
+
+            return response('Something Bad', 500);
+
+        }
+
+    }
+
 }
